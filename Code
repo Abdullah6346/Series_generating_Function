@@ -1,0 +1,18 @@
+This code returns n and then n+1 and then n+2 , it adds one number to the previous number
+let counter1 = 0;
+var createCounter = function (n) {
+  return function () {
+    if (counter1 === 0) {
+      counter1++;
+      console.log(n);
+    } else {
+      console.log(n + counter1);
+      counter1++;
+    }
+  };
+};
+
+const counter = createCounter(10);
+counter();
+counter();
+counter();
